@@ -24,6 +24,11 @@ public class Main {
         System.out.println(list);
 
 
+        System.out.println("valores excluidos de toda a lista");
+        list.limpa();
+        System.out.println(list);
+
+
     }
 
 

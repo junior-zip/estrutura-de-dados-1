@@ -30,6 +30,14 @@ public class List<T> {
         return this.tamanho;
     }
 
+    public void limpa(){
+        this.inicio = null;
+        this.ultimo = null;
+        this.tamanho = 0;
+    }
+
+
+
 
 
     @Override
