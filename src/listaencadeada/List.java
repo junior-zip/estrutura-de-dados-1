@@ -1,34 +1,64 @@
 package listaencadeada;
 
-public class List {
+public class List<T> {
 
-    private no cabeca;
+    private no<T> inicio;
+    private no<T> ultimo;
+    private int tamanho = 0;
 
-    public void incluir(Double valor){
 
-        no No = new no();
-        No.setValor(valor);
-        No.setProximo(cabeca);
-        cabeca = No;
+    //incluir no final
+    public void incluir(T valor){
 
+        no<T> No = new no<T>(valor);
+
+        if(this.tamanho == 0){
+
+            this.inicio = No;
+
+        }else{
+            this.ultimo.setProximo(No);
+
+        }
+        //referenciando o nó
+        this.ultimo = No;
+        this.tamanho ++;
 
     }
+
+    public int getTamanho(){
+        return this.tamanho;
+    }
+
+
+
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
-        sb.append("[");
-        no p = cabeca;
+        // [1, 2, 3, 4]
 
-        while(p!= null){
-            sb.append(p.getValor() + " ");
-            p = p.getProximo();
+        if(this.tamanho == 0){
+            return "[]";
+        }else{
+
         }
 
-        sb.append("]");
-        return sb.toString();
+        StringBuilder builder = new StringBuilder();
+        no<T> atual = this.inicio;
 
+        for(int i = 0; i< tamanho-1; i ++ ){
 
+            builder.append(atual.getValor()).append(",");
+            atual = atual.getProximo();
 
+        }
+        builder.append(atual.getValor());
 
+        return builder.toString();
     }
 }
+
+
+
+
+
+
