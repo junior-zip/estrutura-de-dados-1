@@ -5,17 +5,8 @@ public class no <T>{
     private T valor;
     private no<T> proximo;
 
-    public no() {
-    }
-
-    public no(T valor) {
-        this.valor = valor;
-        this.proximo = null;
-    }
-
-    public no(T valor, no<T> proximo) {
-        this.valor = valor;
-        this.proximo = proximo;
+    public no(T novoValor) {
+        this.valor = novoValor;
     }
 
     public T getValor() {

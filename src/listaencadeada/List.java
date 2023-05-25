@@ -2,27 +2,101 @@ package listaencadeada;
 
 public class List<T> {
 
-    private no<T> inicio;
+    private no<T> primeiro;
     private no<T> ultimo;
-    private int tamanho = 0;
+    private int tamanho;
 
 
-    //incluir no final
+    public List(){
+        this.tamanho = 0;
+    }
+
+
+    public no<T> getPrimeiro() {
+        return primeiro;
+    }
+
+    public void setPrimeiro(no<T> primeiro) {
+        this.primeiro = primeiro;
+    }
+
+    public no<T> getUltimo() {
+        return ultimo;
+    }
+
+    public void setUltimo(no<T> ultimo) {
+        this.ultimo = ultimo;
+    }
+
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    //incluir
     public void incluir(T valor){
 
-        no<T> No = new no<T>(valor);
-
-        if(this.tamanho == 0){
-
-            this.inicio = No;
+        no<T> novoNo = new no<T>(valor);
+        if(this.primeiro == null && this.ultimo == null){
+            this.primeiro = novoNo;
+            this.ultimo = novoNo;
 
         }else{
-            this.ultimo.setProximo(No);
-
+            this.ultimo.setProximo(novoNo);
+            this.ultimo = novoNo;
         }
         //referenciando o nó
-        this.ultimo = No;
         this.tamanho ++;
+
+    }
+
+    public void remover(T valorProcurado){
+        no<T> anterior = null;
+        no<T> atual = this.primeiro;
+
+        for(int i = 0; i < this.getTamanho(); i++){
+
+            if(atual.getValor().equals(valorProcurado)){
+                if (this.tamanho == 1){
+                    this.primeiro = null;
+                    this.ultimo = null;
+
+                }else if(atual == primeiro){
+                    this.primeiro = atual.getProximo();
+                    atual.setProximo(null);
+
+                }else if(atual == ultimo){
+                    this.ultimo = anterior;
+                    anterior.setProximo(null);
+
+                }else{
+                    anterior.setProximo(atual.getProximo());
+                    atual = null;
+                }
+
+                this.tamanho --;
+                break;
+
+            }
+
+            anterior = atual;
+            atual = atual.getProximo();
+
+        }
+    }
+
+    public no<T> get(int posicao){
+
+        no<T> atual = this.primeiro;
+
+        for(int i =0; i < posicao; i++){
+            if(atual.getProximo() != null){
+
+                atual = atual.getProximo();
+            }
+
+        }
+
+        return atual;
 
     }
 
@@ -31,13 +105,10 @@ public class List<T> {
     }
 
     public void limpa(){
-        this.inicio = null;
+        this.primeiro = null;
         this.ultimo = null;
         this.tamanho = 0;
     }
-
-
-
 
 
     @Override
@@ -46,27 +117,19 @@ public class List<T> {
 
         if(this.tamanho == 0){
             return "[]";
-        }else{
-
         }
 
-        StringBuilder builder = new StringBuilder();
-        no<T> atual = this.inicio;
+        no<T> atual = primeiro;
+        System.out.print(atual.getValor() + ", ");
 
-        for(int i = 0; i< tamanho-1; i ++ ){
-
-            builder.append(atual.getValor()).append(",");
+        while (atual.getProximo() != null) {
             atual = atual.getProximo();
-
+            System.out.print(atual.getValor() + ", ");
         }
-        builder.append(atual.getValor());
 
-        return builder.toString();
+        return "Lista{" +
+                "primeiro=" + primeiro +
+                '}';
     }
 }
-
-
-
-
-
 
