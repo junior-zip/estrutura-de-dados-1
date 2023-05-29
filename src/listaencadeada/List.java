@@ -32,7 +32,7 @@ public class List<T> {
         this.tamanho = tamanho;
     }
 
-    //incluir
+    //incluir sempre no final
     public void incluir(T valor){
 
         no<T> novoNo = new no<T>(valor);
@@ -48,6 +48,48 @@ public class List<T> {
         this.tamanho ++;
 
     }
+    // incluir em qualquer posição
+    public void incluirNovo(int posicao,T valorAdicionado){
+        no<T> anterior = null;
+        no<T> atual = this.primeiro;
+
+        no<T> novoNo = new no<T>(valorAdicionado);
+
+        for(int i = 0; i < posicao; i++){
+
+            if(atual.getProximo() != null){
+                anterior.setValor(atual.getValor());
+                atual = atual.getProximo();
+
+            }
+
+        }
+
+        if(this.primeiro == null && this.ultimo == null){
+            primeiro = atual;
+            atual.setProximo(null);
+            atual.setValor(novoNo.getValor());
+
+
+
+        }else if (atual == ultimo ){
+            anterior.setValor(atual.getValor());
+            atual.setValor(novoNo.getValor());
+            atual.setProximo(null);
+
+        }else {
+            anterior.setValor(atual.getValor());
+            atual.setProximo(atual);
+            atual.setValor(novoNo.getValor());
+
+
+        }
+
+        this.tamanho ++;
+
+    }
+
+
 
     public void remover(T valorProcurado){
         no<T> anterior = null;

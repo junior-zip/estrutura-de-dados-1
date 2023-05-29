@@ -23,6 +23,8 @@ public class Main {
 
         list.remover(3);
         System.out.println(list.getTamanho());
+        list.get(2);
+        System.out.println(list);
 
         System.out.println("valores excluidos de toda a lista");
         list.limpa();
