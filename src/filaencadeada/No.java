@@ -1,6 +1,4 @@
-package fila;
-
-import listaencadeada.no;
+package filaencadeada;
 
 public class No <T>{
         private T valor;
@@ -25,6 +23,7 @@ public class No <T>{
         public void setProximo(No<T> proximo) {
             this.proximo = proximo;
         }
+
 
         @Override
         public String toString() {

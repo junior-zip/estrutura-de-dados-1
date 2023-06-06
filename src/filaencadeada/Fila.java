@@ -1,6 +1,4 @@
-package fila;
-
-import listaencadeada.no;
+package filaencadeada;
 
 public class Fila<T> {
 
@@ -101,10 +99,7 @@ public class Fila<T> {
 
         }
 
-
-
     }
-
 
     @Override
     public String toString() {
@@ -122,6 +117,6 @@ public class Fila<T> {
                     "primeiro=" + atual +
                     '}';
 
-
     }
+
 }

@@ -1,6 +1,4 @@
-package fila;
-
-import java.util.Scanner;
+package filaencadeada;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,13 +13,18 @@ public class Main {
         fila.remover();
         System.out.println();
         fila.consultar();
+        System.out.println();
+        System.out.print("valor do primeiro item da lista: " + fila.getInicio().getValor());
+
         fila.remover();
         System.out.println();
         fila.consultar();
 
         System.out.println();
+        fila.Esvaziar();
+        fila.consultar();
 
-        System.out.println("valor do primeiro item  da lista: " + fila.getInicio().getValor());
+
 
 
 
