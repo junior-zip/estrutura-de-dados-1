@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6893c27b-3576-4c54-9292-e3ac4e1d8176" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/filaDuplamente/FilaDuplamente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filaDuplamente/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filaDuplamente/No.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/filaSequencial/FilaSequencial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/filaSequencial/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fila/Fila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filaencadeada/Fila.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fila/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filaencadeada/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fila/No.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filaencadeada/No.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
