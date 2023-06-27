@@ -53,6 +53,8 @@ public class FilaSequencial {
     }
 
     //11 + 12  % 12 == 11
+
+
     //10 + 12 % 12 == 10
     //9 + 12 % 12 == 9
     public void desenfileirar(){
