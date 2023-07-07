@@ -52,11 +52,9 @@ public class Listas < T extends Comparable>{
 
         }
 
-
     }
 
     public void incluirFinal(){
-
 
         if(tamanho  != 0){
 
@@ -68,7 +66,6 @@ public class Listas < T extends Comparable>{
             for(int i = 0; i < tamanho ; i++) {
 
                 lista1[i] = lista[i];
-
             }
 
             tamanho++;
@@ -90,9 +87,7 @@ public class Listas < T extends Comparable>{
 
             }
 
-
         }
-
 
     }
 
@@ -115,6 +110,5 @@ public class Listas < T extends Comparable>{
 
         }
     }
-
 
 }

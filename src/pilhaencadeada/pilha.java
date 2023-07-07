@@ -28,25 +28,18 @@ public class pilha <T> {
     public void Empilhar(T item) {
 
         no<T> No = new no<T>(item);
-        if (count < 12) {
-
+        if (count < 4) {
             if (topo == null) {
-
-                System.out.println("pilha vazia, adicionando o primeiro item");
 
                 No.setProximo(null);
                 topo = No;
                 num = No;
             } else {
-
                 topo = No;
                 No.setProximo(num);
                 num = No;
-
             }
             count ++;
-        }else{
-            System.out.println("pilha cheia");
         }
     }
     public void Desempilhar(){

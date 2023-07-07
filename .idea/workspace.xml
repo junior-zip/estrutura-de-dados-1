@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6893c27b-3576-4c54-9292-e3ac4e1d8176" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pilhaencadeada/PilhaCheiaException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pilhaencadeada/PilhaVaziaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pilhasequencial/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pilhasequencial/PilhaSequencial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filaSequencial/FilaSequencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filaSequencial/FilaSequencial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lista/Listas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lista/Listas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pilhaencadeada/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilhaencadeada/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pilhaencadeada/PilhaCheiaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilhaencadeada/PilhaCheiaException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pilhaencadeada/pilha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilhaencadeada/pilha.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,13 +51,26 @@
       <recent name="filaDuplamente" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.pilhaencadeada.Main">
+  <component name="RunManager" selected="Application.Pilhasequencial.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="filaSequencial.Main" />
       <module name="Lista" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="filaSequencial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pilhasequencial.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pilhasequencial.Main" />
+      <module name="Lista" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Pilhasequencial.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Pilhasequencial.Main" />
         <item itemvalue="Application.pilhaencadeada.Main" />
         <item itemvalue="Application.Main" />
       </list>
