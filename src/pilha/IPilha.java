@@ -10,7 +10,4 @@ public interface IPilha <T>{
     public int getQtd();
     public boolean estahVazia();
 
-
-
-
 }

@@ -1,9 +1,10 @@
 package pilha.pilhaencadeada;
 
+import pilha.IPilha;
 import pilha.PilhaCheiaException;
 import pilha.PilhaVaziaException;
 
-public class PilhaEncadeada<T> {
+public class PilhaEncadeada<T> implements IPilha {
 
     private no<T> topo;
     private no<T> num;
@@ -13,25 +14,43 @@ public class PilhaEncadeada<T> {
         topo = null;
         count = 0;
     }
-    public no<T> getTopo() {
-        return topo;
+
+
+    @Override
+    public no<T> getTopo() throws PilhaVaziaException {
+        if(topo == null ){
+
+            throw new PilhaVaziaException("Pilha vazia");
+
+        }else{
+            return (no<T>) topo;
+        }
+
     }
 
-    public int getCount() {
+    @Override
+    public int getQtd() {
         return count;
     }
-    public void setCount(int count) {
-        this.count = count;
+
+    @Override
+    public boolean estahVazia() {
+        if(topo == null){
+
+            return true;
+
+        }else{
+
+            return false;
+
+        }
     }
 
-    public void setTopo(no<T> topo) {
-        this.topo = topo;
-    }
+    @Override
+    public void empilhar(Object item) throws PilhaCheiaException {
 
-    public void Empilhar(T item) {
-
-        no<T> No = new no<T>(item);
-        if (count < 4) {
+        no<T> No = new no<T>((T) item);
+        if (count <= 4) {
             if (topo == null) {
 
                 No.setProximo(null);
@@ -43,19 +62,27 @@ public class PilhaEncadeada<T> {
                 num = No;
             }
             count ++;
+        }else{
+            throw new PilhaCheiaException("Pilha cheia");
         }
     }
-    public void Desempilhar(){
 
-        if(topo == null){
-            System.out.println("Pilha vazia");
-        }else{
+    @Override
+    public Object desempilhar() throws PilhaVaziaException {
+
+        no<T> item = num;
+        if (topo == null) {
+            throw new PilhaVaziaException("Pilha vazia");
+        } else {
             topo = topo.getProximo();
         }
+
+        return (T) item;
     }
 
+
     public void Estacheia() throws PilhaCheiaException, PilhaVaziaException {
-        if (count >= 12) {
+        if (count > 4) {
             throw new PilhaCheiaException("Pilha está cheia");
         }else if (topo == null) {
             throw new PilhaVaziaException("Pilha vazia");
