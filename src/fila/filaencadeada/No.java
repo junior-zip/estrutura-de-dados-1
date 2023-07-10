@@ -1,4 +1,4 @@
-package filaencadeada;
+package fila.filaencadeada;
 
 public class No <T>{
         private T valor;

@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6893c27b-3576-4c54-9292-e3ac4e1d8176" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pilhasequencial/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pilhasequencial/PilhaSequencial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filaSequencial/FilaSequencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filaSequencial/FilaSequencial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lista/Listas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lista/Listas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pilhaencadeada/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilhaencadeada/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pilhaencadeada/PilhaCheiaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilhaencadeada/PilhaCheiaException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pilhaencadeada/pilha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilhaencadeada/pilha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fila/filaSequencial/FilaSequencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fila/filaSequencial/FilaSequencial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fila/filaencadeada/Fila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fila/filaencadeada/Fila.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fila/filaencadeada/No.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fila/filaencadeada/No.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filaDuplamente/FilaDuplamente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filaDuplamente/FilaDuplamente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filaDuplamente/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filaDuplamente/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filaencadeada/Fila.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filaencadeada/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filaencadeada/No.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,26 +53,13 @@
       <recent name="filaDuplamente" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Pilhasequencial.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="filaSequencial.Main" />
+      <option name="MAIN_CLASS_NAME" value="fila.filaSequencial.Main" />
       <module name="Lista" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="filaSequencial.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Pilhasequencial.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Pilhasequencial.Main" />
-      <module name="Lista" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Pilhasequencial.*" />
+          <option name="PATTERN" value="fila.filaSequencial.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,12 +74,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pilhaencadeada.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pilhaencadeada.Main" />
+    <configuration name="fila.filaencadeada.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fila.filaencadeada.Main" />
       <module name="Lista" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pilhaencadeada.*" />
+          <option name="PATTERN" value="fila.filaencadeada.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pilha.Pilhasequencial.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pilha.Pilhasequencial.Main" />
+      <module name="Lista" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pilha.Pilhasequencial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pilha.pilhaencadeada.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pilha.pilhaencadeada.Main" />
+      <module name="Lista" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pilha.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pilha.pilhaencadeada.Pilhasequencial.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pilha.pilhaencadeada.Pilhasequencial.Main" />
+      <module name="Lista" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pilha.pilhaencadeada.Pilhasequencial.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,9 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Pilhasequencial.Main" />
-        <item itemvalue="Application.pilhaencadeada.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.fila.filaencadeada.Main" />
+        <item itemvalue="Application.pilha.Pilhasequencial.Main" />
+        <item itemvalue="Application.pilha.pilhaencadeada.Main" />
+        <item itemvalue="Application.pilha.pilhaencadeada.Pilhasequencial.Main" />
       </list>
     </recent_temporary>
   </component>

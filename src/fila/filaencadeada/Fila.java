@@ -1,4 +1,4 @@
-package filaencadeada;
+package fila.filaencadeada;
 
 public class Fila<T> {
 

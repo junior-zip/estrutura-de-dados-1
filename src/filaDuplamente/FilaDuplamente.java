@@ -1,7 +1,5 @@
 package filaDuplamente;
 
-import filaencadeada.Fila;
-
 public class FilaDuplamente<T> {
 
     private No<T> inicio;
