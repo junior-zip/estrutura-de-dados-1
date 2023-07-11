@@ -12,7 +12,6 @@ public class FilaSequencial <T> implements Ifila <T> {
     private int inicio;
     private int fim;
     private int posicoes;
-
     private int count;
 
     public FilaSequencial(int tamanho) {
@@ -24,22 +23,6 @@ public class FilaSequencial <T> implements Ifila <T> {
     }
     public T[] getLista() {
         return lista;
-    }
-
-    public int getInicio() {
-        return inicio;
-    }
-
-    public void setInicio(int inicio) {
-        this.inicio = inicio;
-    }
-
-    public int getFim() {
-        return fim;
-    }
-
-    public void setFim(int fim) {
-        this.fim = fim;
     }
 
     @Override
@@ -64,7 +47,6 @@ public class FilaSequencial <T> implements Ifila <T> {
         if(lista[inicio] == null){
             throw new FilaVaziaException("Fila Vazia");
         }
-
         lista[inicio] = null;
         this.inicio = (this.inicio -1 + lista.length) % lista.length;
         count--;
@@ -99,13 +81,12 @@ public class FilaSequencial <T> implements Ifila <T> {
         for (int i = 0; i < lista.length; i++) {
 
             lista[i] = null;
-
         }
             count = 0;
     }
 
     @Override
-    public T visusalizarProximo() throws FilaVaziaException {
+    public T visualizarProximo() throws FilaVaziaException {
         return lista[fim -1];
     }
 }

@@ -8,9 +8,7 @@ public interface Ifila<T>{
     public int getQtdMaxSuportada();
     public boolean estaVazia();
     public void limpar();
-    public T visusalizarProximo() throws FilaVaziaException;
-
-
-
+    public T visualizarProximo() throws FilaVaziaException;
 
 }
+

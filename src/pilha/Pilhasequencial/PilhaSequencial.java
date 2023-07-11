@@ -14,7 +14,6 @@ public class PilhaSequencial <T> implements IPilha<T> {
 
     private int tamanho;
 
-
     public PilhaSequencial(int tamanho) {
         this.tamanho = tamanho;
         this.lista = (T[]) new Object[tamanho];
@@ -28,7 +27,6 @@ public class PilhaSequencial <T> implements IPilha<T> {
     public void setLista(T[] lista) {
         this.lista = lista;
     }
-
 
     @Override
     public T getTopo() throws PilhaVaziaException{
@@ -45,8 +43,6 @@ public class PilhaSequencial <T> implements IPilha<T> {
         return 0;
     }
 
-
-
     @Override
     public void empilhar(Object num) throws PilhaCheiaException {
             lista[topo] = (T) num;
@@ -55,7 +51,6 @@ public class PilhaSequencial <T> implements IPilha<T> {
             }
         topo ++;
     }
-
 
     @Override
     public T desempilhar() throws PilhaVaziaException{
@@ -78,7 +73,6 @@ public class PilhaSequencial <T> implements IPilha<T> {
         if(topo == 0){
             return true;
 
-
         }else{
 
             return false;
@@ -86,8 +80,5 @@ public class PilhaSequencial <T> implements IPilha<T> {
         }
 
     }
-
-
-
 
 }

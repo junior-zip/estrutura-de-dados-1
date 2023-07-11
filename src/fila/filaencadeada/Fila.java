@@ -1,14 +1,20 @@
 package fila.filaencadeada;
+import fila.FilaCheiaException;
+import fila.FilaVaziaException;
+import fila.Ifila;
 
-public class Fila<T> {
+public class Fila<T> implements Ifila {
 
     private No<T> inicio;
     private No<T> fim;
+    private int count;
+    private int posicoes;
 
+    public Fila(int posicoes) {
+        this.count = posicoes;
+        this.posicoes = posicoes;
 
-    public Fila() {
     }
-
 
     public Fila(No<T> inicio, No<T> fim) {
         this.inicio = inicio;
@@ -30,32 +36,29 @@ public class Fila<T> {
     public void setFim(No<T> fim) {
         this.fim = fim;
     }
+    @Override
+    public void incluir(Object elemento) throws FilaCheiaException{
+         No<T> no = (No<T>) new No<>(elemento);
 
-    public void inserir(T elemento){
-        No<T> no = new No<>(elemento);
-
-        if(inicio == null){
-
-            System.out.println("A Fila está vazia!");
-
-            inicio = no;
-            fim = no;
-
+        if(count != 0){
+            if(inicio == null){
+                inicio = no;
+                fim = no;
+                count--;
+            }else{
+                fim.setProximo(no);
+                fim = fim.getProximo();
+                count --;
+            }
 
         }else{
-            fim.setProximo(no);
-            fim = fim.getProximo();
-
+            throw new FilaCheiaException("Fila Cheia");
         }
-
-        System.out.println(" Elemento inserido na fila");
-
     }
-
-    public void consultar (){
+    public void consultar () throws FilaVaziaException{
 
         if(inicio == null){
-            System.out.println("A fila está vazia");
+            throw new FilaVaziaException("Fila Vazia");
 
         }else{
             No<T> aux = inicio;
@@ -68,55 +71,59 @@ public class Fila<T> {
                 aux = aux.getProximo();
 
             }
-
         }
-
     }
 
+    @Override
+    public T remover ()  throws FilaVaziaException{
 
-    public void remover (){
-
+        No<T> excluir = inicio;
         if(inicio == null ){
-
-            System.out.println("A lista está vazia");
+            throw new FilaVaziaException("Fila Vazia");
         }else{
             inicio = inicio.getProximo();
 
         }
-
+        count++;
+        return (T) excluir;
+    }
+    @Override
+    public int getQtd() {
+        return posicoes - count;
     }
 
-    public void Esvaziar(){
-        if(inicio == null){
+    @Override
+    public int getQtdMaxSuportada() {
+        return posicoes;
+    }
 
-            System.out.println("A lista já está vazia!");
-
-
+    @Override
+    public boolean estaVazia() {
+        if(count == posicoes){
+            return true;
         }else{
+            return false;
+        }
+    }
 
+    @Override
+    public Object visualizarProximo() throws FilaVaziaException {
+       No<T> proximo = inicio.getProximo();
+        if(count == posicoes){
+            throw new FilaVaziaException("Fila Vazia");
+        }else{
+            return proximo.getValor();
+        }
+    }
+
+    @Override
+    public void limpar(){
+        if(inicio == null){
+            System.out.println("A lista já está vazia!");
+        }else{
             inicio = null;
             fim = null;
 
         }
-
     }
-
-    @Override
-    public String toString() {
-        if(inicio == null){
-            System.out.println("A lista está vazia");
-        }
-            No<T> atual = inicio;
-
-            while (atual.getProximo() != null) {
-                atual = atual.getProximo();
-                System.out.print(atual.getValor() + ", ");
-            }
-
-            return "Lista{" +
-                    "primeiro=" + atual +
-                    '}';
-
-    }
-
 }

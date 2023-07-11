@@ -18,7 +18,7 @@ public class Main {
         filaSequencial.incluir(6);
         System.out.println(Arrays.toString(filaSequencial.getLista()));
         System.out.println(Arrays.toString(filaSequencial.getLista()));
-        System.out.println(filaSequencial.visusalizarProximo());
+        System.out.println(filaSequencial.visualizarProximo());
         System.out.println(filaSequencial.getQtdMaxSuportada());
         System.out.println(filaSequencial.getQtd());
         filaSequencial.limpar();
