@@ -1,13 +1,20 @@
 package ListaDuplamente;
 
 
+import lista.Listas;
 import listaencadeada.no;
 
-public class ListaDupla<T> {
+public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
 
     private No<T> inicio;
     private No<T> fim;
     private int tamanho;
+
+    public ListaDupla() {
+        this.inicio = null;
+        this.fim = null;
+        this.tamanho = 0;
+    }
 
     public No<T> getInicio() {
         return inicio;
@@ -29,17 +36,6 @@ public class ListaDupla<T> {
         return tamanho;
     }
 
-    public void setTamanho(int tamanho) {
-        this.tamanho = tamanho;
-    }
-
-    public ListaDupla() {
-        this.inicio = null;
-        this.fim = null;
-        this.tamanho = 0;
-    }
-
-
     public void inserir(T valor){
 
         No<T> no  = new No<>(valor);
@@ -49,16 +45,27 @@ public class ListaDupla<T> {
 
         if(inicio == null){
             inicio = no;
-
         }
 
         if(fim != null){
             fim.setProximo(no);
-
         }
-
         fim = no;
         tamanho ++;
+    }
+
+    public void inserirInicio(T valor) throws Exception{
+        No<T> no = new No<>(valor);
+
+        no.setProximo(inicio);
+        no.setAnterior(null);
+
+        if(inicio == null){
+            no.setProximo(null);
+        }
+
+        inicio = no;
+        tamanho++;
     }
 
     public ListaDupla<T> subLista(int inicioLista, int fimLista){
@@ -85,7 +92,8 @@ public class ListaDupla<T> {
 
     }
 
-    public void incluir(T elemento, int posicao){
+     //aplicavel no papel
+    public void incluir(T elemento, int posicao) throws Exception{
 
         No<T> local = new No<T>();
 
@@ -107,7 +115,6 @@ public class ListaDupla<T> {
             fim = no;
         }
 
-
         if(posicao == 0 ){
             inicio = no;
 
@@ -118,6 +125,88 @@ public class ListaDupla<T> {
         tamanho ++;
 
     }
+
+    //retorna o valor
+    public  T get(int posicao) throws Exception{
+        No<T> aux;
+
+        aux = inicio;
+
+        if(inicio != null){
+            for(int i = 0; i < posicao; i++){
+
+                aux = aux.getProximo();
+
+            }
+            if(posicao == 0){
+
+                return inicio.getValor();
+
+            }else{
+                return aux.getValor();
+            }
+        }else{
+
+            throw new Exception("Sem valor para acessar!");
+
+        }
+    }
+
+    //retorna a posicao
+    public int getPosicao(T elemento){
+        int count = 0;
+        No<T> aux = new No<>(elemento);
+
+        No<T> aux2 = inicio;
+
+        if(!aux.equals(inicio)){
+            while( aux != aux2){
+
+                if(aux2.getProximo() != null){
+                    aux2 = aux2.getProximo();
+
+                }
+                count++;
+
+            }
+
+            return count;
+
+        }else{
+
+            return 0;
+        }
+
+
+    }
+
+    public void remover(int posicao){
+        No<T> aux = inicio;
+
+        if(posicao == 0) {
+
+            inicio = inicio.getProximo();
+
+        }else{
+
+            for(int i=0; i < posicao; i++){
+                aux = aux.getProximo();
+            }
+
+            if(aux.getProximo() == null){
+                fim = fim.getAnterior();
+                fim.setProximo(null);
+            }else {
+                aux.getProximo().setAnterior(aux.getAnterior());
+                aux.getAnterior().setProximo(aux.getProximo());
+
+            }
+
+        }
+        
+        tamanho--;
+    }
+
 
     @Override
     public String toString() {
@@ -137,11 +226,5 @@ public class ListaDupla<T> {
 
         return strbuf;
     }
-
-
-
-
-
-
 
 }

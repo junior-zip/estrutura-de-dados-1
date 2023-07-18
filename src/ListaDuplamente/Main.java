@@ -2,7 +2,7 @@ package ListaDuplamente;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         ListaDupla<String> lista = new ListaDupla<>();
 
@@ -11,8 +11,10 @@ public class Main {
         lista.inserir("BA");
         lista.inserir("RJ");
         lista.inserir("TO");
-        System.out.println(lista);
+         lista.remover(1);
+         System.out.println(lista);
         lista.incluir("Ms", 2);
+      //  lista.getPosicao("BA");
         System.out.println(lista);
         System.out.println("A lista tem: " + lista.getTamanho() + " itens");
         System.out.println(lista);

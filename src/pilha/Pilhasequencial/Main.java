@@ -12,7 +12,7 @@ public class Main {
         pilhaSequencial.empilhar(4);
         pilhaSequencial.empilhar(1);
         pilhaSequencial.desempilhar();
-
+        System.out.println(pilhaSequencial.getQtd());
         System.out.println(pilhaSequencial.getTopo());
 
 

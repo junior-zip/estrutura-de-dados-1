@@ -85,7 +85,7 @@ public class Fila<T> implements Ifila {
 
         }
         count++;
-        return (T) excluir;
+        return (T) excluir.getValor();
     }
     @Override
     public int getQtd() {
@@ -121,6 +121,7 @@ public class Fila<T> implements Ifila {
         if(inicio == null){
             System.out.println("A lista já está vazia!");
         }else{
+            count = posicoes;
             inicio = null;
             fim = null;
 

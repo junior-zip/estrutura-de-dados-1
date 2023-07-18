@@ -10,7 +10,7 @@ public class PilhaSequencial <T> implements IPilha<T> {
     private int topo;
 
     private T num;
-    private int qtd;
+    private int count;
 
     private int tamanho;
 
@@ -40,7 +40,7 @@ public class PilhaSequencial <T> implements IPilha<T> {
 
     @Override
     public int getQtd() {
-        return 0;
+        return count;
     }
 
     @Override
@@ -50,6 +50,7 @@ public class PilhaSequencial <T> implements IPilha<T> {
             throw new PilhaCheiaException("Pilha cheia");
             }
         topo ++;
+            count++;
     }
 
     @Override
@@ -62,7 +63,8 @@ public class PilhaSequencial <T> implements IPilha<T> {
 
         }else{
             lista[topo - 1] = null;
-            topo -=1;
+            topo --;
+            count--;
         }
 
         return var1;

@@ -8,8 +8,8 @@ public class No<T> {
     private No<T> anterior;
 
 
-    public No(T valor){
-        this.valor = valor;
+    public No(T NovoValor){
+        this.valor = NovoValor;
 
     }
 

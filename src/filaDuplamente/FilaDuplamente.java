@@ -73,7 +73,6 @@ public class FilaDuplamente<T> {
         }else{
             inicio = inicio.getProximo();
 
-
         }
 
     }

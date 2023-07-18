@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6893c27b-3576-4c54-9292-e3ac4e1d8176" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pilha/Pilhasequencial/PilhaInfinita.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fila/Ifila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fila/Ifila.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fila/filaSequencial/FilaSequencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fila/filaSequencial/FilaSequencial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fila/filaSequencial/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fila/filaSequencial/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ListaDuplamente/ListaDupla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListaDuplamente/ListaDupla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ListaDuplamente/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListaDuplamente/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ListaDuplamente/No.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListaDuplamente/No.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fila/filaencadeada/Fila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fila/filaencadeada/Fila.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filaDuplamente/FilaDuplamente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filaDuplamente/FilaDuplamente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pilha/Pilhasequencial/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilha/Pilhasequencial/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pilha/Pilhasequencial/PilhaSequencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilha/Pilhasequencial/PilhaSequencial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +53,20 @@
       <recent name="filaDuplamente" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.fila.filaencadeada.Main">
+  <component name="RunManager" selected="Application.ListaDuplamente.Main">
+    <configuration name="ListaDuplamente.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ListaDuplamente.Main" />
+      <module name="Lista" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ListaDuplamente.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fila.filaSequencial.Main" />
       <module name="Lista" />
@@ -110,26 +126,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pilha.pilhaencadeada.Pilhasequencial.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pilha.pilhaencadeada.Pilhasequencial.Main" />
-      <module name="Lista" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pilha.pilhaencadeada.Pilhasequencial.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ListaDuplamente.Main" />
+        <item itemvalue="Application.pilha.Pilhasequencial.Main" />
         <item itemvalue="Application.fila.filaencadeada.Main" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.pilha.Pilhasequencial.Main" />
         <item itemvalue="Application.pilha.pilhaencadeada.Main" />
-        <item itemvalue="Application.pilha.pilhaencadeada.Pilhasequencial.Main" />
       </list>
     </recent_temporary>
   </component>
