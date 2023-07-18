@@ -1,6 +1,5 @@
 package ListaDuplamente;
 
-
 import lista.Listas;
 import listaencadeada.no;
 
@@ -82,11 +81,9 @@ public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
                 lista2.inserir(local.getValor());
 
             }
-
             local = local.getProximo();
 
         }
-
 
         return lista2;
 
@@ -94,7 +91,6 @@ public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
 
      //aplicavel no papel
     public void incluir(T elemento, int posicao) throws Exception{
-
         No<T> local = new No<T>();
 
         for(int i = 0; i < posicao && local != null; i ++ ){
@@ -102,7 +98,6 @@ public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
             local = local.getProximo();
 
         }
-
         No<T> no = new No<T>(elemento);
 
         no.setProximo(local);
@@ -154,8 +149,6 @@ public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
 
     //retorna a posicao
 
-
-
     public int getPosicao(T elemento) {
         int count = 0;
         No<T> aux = inicio;
@@ -186,25 +179,44 @@ public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
             for(int i=0; i < posicao; i++){
                 aux = aux.getProximo();
             }
-
             if(aux.getProximo() == null){
                 fim = fim.getAnterior();
                 fim.setProximo(null);
             }else {
                 aux.getProximo().setAnterior(aux.getAnterior());
                 aux.getAnterior().setProximo(aux.getProximo());
-
             }
-
         }
 
         tamanho--;
     }
 
+    public void limpar() throws Exception{
+        if(tamanho == 0){
+            throw new Exception("Lista vazia: Já está vazia");
+        }else {
+            inicio.setProximo(null);
+            inicio.setAnterior(null);
+            inicio = null;
+            tamanho = 0;
+        }
+    }
+
+    public boolean contem(T elemento){
+        No<T> aux = inicio;
+
+        while( aux != null){
+            if(aux.getValor().equals(elemento)){
+                return true;
+            }
+            aux = aux.getProximo();
+
+        }
+        return false;
+    }
 
     @Override
     public String toString() {
-
         No<T> no = inicio;
         String strbuf = "";
 
@@ -213,12 +225,9 @@ public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
             if(no != null){
                 strbuf += "(" + no.getValor() + "), ";
                 no = no.getProximo();
-
             }
-
         }
 
         return strbuf;
     }
-
 }

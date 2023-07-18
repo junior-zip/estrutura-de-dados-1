@@ -16,9 +16,11 @@ public class Main {
         lista.incluir("Ms", 2);
         System.out.println(lista.getPosicao("TO"));
         System.out.println(lista);
+        System.out.println(lista.contem("Ms"));
         System.out.println("A lista tem: " + lista.getTamanho() + " itens");
-        System.out.println(lista);
-        System.out.println(lista.subLista(1, 3));
+        lista.limpar();
+
+        //System.out.println(lista.subLista(1, 3));
 
 
 
