@@ -153,31 +153,25 @@ public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
     }
 
     //retorna a posicao
-    public int getPosicao(T elemento){
+
+
+
+    public int getPosicao(T elemento) {
         int count = 0;
-        No<T> aux = new No<>(elemento);
+        No<T> aux = inicio;
 
-        No<T> aux2 = inicio;
-
-        if(!aux.equals(inicio)){
-            while( aux != aux2){
-
-                if(aux2.getProximo() != null){
-                    aux2 = aux2.getProximo();
-
-                }
-                count++;
+        while (aux != null) {
+            if (aux.getValor().equals(elemento)) {
+                return count;
 
             }
 
-            return count;
-
-        }else{
-
-            return 0;
+            aux = aux.getProximo();
+            count++;
         }
 
-
+        // Elemento não encontrado na lista
+        return -1;
     }
 
     public void remover(int posicao){
@@ -203,7 +197,7 @@ public class ListaDupla<T extends Comparable<T>>  extends Listas<T> {
             }
 
         }
-        
+
         tamanho--;
     }
 

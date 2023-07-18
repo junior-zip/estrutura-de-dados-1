@@ -14,7 +14,7 @@ public class Main {
          lista.remover(1);
          System.out.println(lista);
         lista.incluir("Ms", 2);
-      //  lista.getPosicao("BA");
+        System.out.println(lista.getPosicao("TO"));
         System.out.println(lista);
         System.out.println("A lista tem: " + lista.getTamanho() + " itens");
         System.out.println(lista);
