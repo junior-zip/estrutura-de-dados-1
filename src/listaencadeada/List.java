@@ -78,10 +78,10 @@ public class List<T> {
             atual.setProximo(null);
 
         }else {
-            anterior.setValor(atual.getValor());
-            atual.setProximo(atual);
-            atual.setValor(novoNo.getValor());
 
+          anterior.setProximo(novoNo);
+          novoNo.setProximo(atual);
+           
 
         }
 
